@@ -29,6 +29,7 @@ public class SchoolService {
                                 .email("NOT_FOUND")
                                 .build()
                 );
+        //find all students from student server
         var students = client.findAllStudentsBySchool(schoolId);
         return FullSchoolResponse.builder()
                 .name(school.getName())

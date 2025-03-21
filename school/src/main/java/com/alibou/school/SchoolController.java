@@ -31,6 +31,7 @@ public class SchoolController {
     public ResponseEntity<FullSchoolResponse> findAllSchools(
             @PathVariable("school-id") Integer schoolId
     ) {
+        System.out.println("school id " + schoolId);
         return ResponseEntity.ok(service.findSchoolsWithStudents(schoolId));
     }
 }
